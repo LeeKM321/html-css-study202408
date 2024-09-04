@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        width: 300px;
+        height: 400px;
+        border: 4px solid #000;
+        display: flex;
+        /* flex-flow: row wrap; */
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item {
+        width: 200px;
+        height: 100px;
+        background: red;
+        border-radius: 10px;
+        font-size: 40px;
+      }
+
+      /* 
+        container = 300px
+        모든 item = 400px -> 100px 부족
+
+        flex-shrink: 1 -> 1 / 1 + 2: 200px - (100 * 1/3)
+        flex-shrink: 2 -> 2 / 1 + 2: 200px - (100 * 2/3)
+      */
+
+      /*
+       item들을 감싸고 있는 container의 너비가 줄어들게 되면
+       안쪽에 있는 item들도 너비가 줄어들어야 합니다. (shrink는 flex-wrap이 nowrap일 경우에만 동작합니다.)
+       container가 표현하지 못한 item들의 총 길이만큼 비율대로 가져가게 됩니다.
+       ex) container의 크기가 300px, item들의 총 너비가 400px일 경우, 표현하지 못한 부분은 100px.
+       저 100px의 크기를 flex-shrink 속성으로 부여한 값만큼 비율적으로 줄어들게 됩니다.
+       flex-shrink: 3 -> 100/4 * 3 = 75px만큼 줄어들어야 함.
+       flex-shrink: 1 -> 100/4 * 1 = 25px만큼 줄어들어야 함.
+
+       flex-basis를 설정하면 자체 width와 상관없이 지정한 basis값의 width를 가지게 됩니다.
+       비율적으로 동일하게 줄어드는 너비를 설정하고 싶으면 auto 혹은 basis를 설정하지 않습니다.
+     */
+
+      .item1 {
+        /* flex-basis: 300px;
+        flex-shrink: 1; */
+
+        /* 
+        flex: grow shrink basis 
+        default: grow -> 1, shrink -> 0, basis -> 0
+        */
+        flex: 1 1;
+      }
+
+      .item2 {
+        flex-basis: 100px;
+        flex-shrink: 2;
+        background: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">A</div>
+      <div class="item item2">B</div>
+    </div>
+  </body>
+</html>
