@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    background: #aaa;
+    font-size: 14px;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+/* header style */
+
+header {
+    background: #fa0;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 8em;
+    font-weight: 700;
+    padding: 10px;
+}
+
+header h1 span {
+    font-size: 20px;
+    display: block;
+    margin-top: 20px;
+}
+
+header .stit {
+    background: #ccc;
+    color: #333;
+    padding: 5px 0;
+}
+
+.container > * {
+    float: left;
+}
+
+/* side menu style */
+.container .side-menu {
+    width: 25%;
+}
+
+.container .side-menu h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #fff;
+    background: #900;
+    padding: 10px;
+}
+
+.container .side-menu ul {
+    margin-top: 10px;
+}
+
+.container .side-menu ul li {
+    padding: 10px;
+}
+
+.container .side-menu ul li a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* main-content */
+.container .main-content {
+    width: 50%;
+    background: #ddd;
+    color: #123456;
+}
+
+.container .main-content .art-piece {
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.container .main-content .art-piece .title {
+    background: #123456;
+    color: #ddd;
+    padding: 7px 5px;
+    font-size: 1.1em;
+}
+
+.container .main-content .art-piece .artist {
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.container .main-content .art-piece .detail {
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+/* banner */
+.container .banner {
+    width: 25%;
+    font-weight: 700;
+}
+
+.container .banner h3 {
+    font-size: 1.7em;
+    color: #333;
+    padding: 20px 10px;
+}
+
+.container .banner h3 span,
+.container .banner h3 strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container .banner h3 span {
+    text-decoration: underline;
+}
+
+.container .banner h3 .all {
+    color: #999;
+}
+
+.container .banner h3 .love {
+    color: #fa0;
+}
+
+.container .banner .link {
+    padding: 0 10px;
+}
+
+.container .banner .link li {
+    margin-bottom: 15px;
+}
+
+.container .banner .link li a {
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    width: fit-content;
+    font-size: 1.1em;
+}
+
+.container .banner .link li span {
+    font-weight: 400;
+}
+
+/* footer */
+
+footer {
+    background: #123456;
+    color: #ddd;
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
